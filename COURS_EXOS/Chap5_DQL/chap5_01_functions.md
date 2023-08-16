@@ -37,7 +37,7 @@ Selon les SGDB les fonctions de date peuvent être plus ou moins fournies.
 
 ```sql
 SELECT 
-    birth_date,
+    birth_day,
     CURDATE(), -- date courante au format date
     year(birth_date) as year_pilot_bd,
     month(birth_date) as month_pilot_bd,
