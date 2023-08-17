@@ -172,3 +172,8 @@ Ajoutez une colonne qui détermine le nom du pays en fonction de l'information s
 Récupérez le nom de ces villes.
 */
 
+ALTER TABLE `companies` ADD COLUMN `country` CHAR(4) ;
+
+SELECT `company`, AVG(num_flying) FROM `pilots`
+WHERE `company`  IN ( SELECT `comp` FROM `companies` WHERE `country` = 'fr' )
+GROUP BY `company` ;
