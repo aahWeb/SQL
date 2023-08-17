@@ -165,6 +165,10 @@ HAVING nbDay > 30;
 
 
 /*
-09 Afficher la moyenne des heures de vol pour les compagnies qui sont en France.
+
+Ajoutez une colonne qui détermine le nom du pays en fonction de l'information sur la ville.
+
+09 Afficher la moyenne des heures de vol pour les compagnies dont la ville est en France,
+Récupérez le nom de ces villes.
 */
 
