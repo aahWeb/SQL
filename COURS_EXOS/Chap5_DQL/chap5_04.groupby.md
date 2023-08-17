@@ -20,7 +20,7 @@ STDDEV(exp)               -- écart type (standard deviation)
 SELECT col1 [,col2, ...], fonction_groupe
 FROM table
 WHERE (conditions)
-**GROUP BY clo1 [, col2, ...]**
+GROUP BY clo1 [, col2, ...]
 HAVING condition_02
 ORDER BY col1 [ASC | DESC] [, col2 ...]
 LIMIT
