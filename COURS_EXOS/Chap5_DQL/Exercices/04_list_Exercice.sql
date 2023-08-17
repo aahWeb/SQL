@@ -1,3 +1,44 @@
+/**
+
+UPDATE companies
+SET street = 'Shenton Park',
+ city = 'Perth', 
+ num_street=20
+WHERE comp = 'AUS';
+
+UPDATE companies
+SET street = 'Rue de la Lieure',
+ city = 'Voiron',
+  num_street=11
+WHERE comp = 'FRE1';
+
+UPDATE companies
+SET street = 'Qinghai',
+ city = 'Xian de Tongde',
+  num_street=17
+WHERE comp = 'CHI';
+
+UPDATE companies
+SET street = 'Rue de la Paix',
+ city = 'Paris',
+  num_street=22
+WHERE comp = 'FRE2';
+
+UPDATE companies
+SET street = 'Marymount',
+ city = 'Singapour',
+  num_street=1
+WHERE comp = 'SIN';
+
+INSERT INTO `companies`
+SET `comp` = 'ITA', 
+    `street` = 'mapoli', 
+    `city` = 'Rome', 
+    `name` = 'Italia Air',
+    `num_street` = 20;
+
+*/
+
 /*
 01 Calculez la moyenne des heures de vol pour chaque compagnie.
 */
