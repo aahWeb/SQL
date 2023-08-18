@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Company extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'comp';
+
 
      /**
      * Get the comments for the blog post.

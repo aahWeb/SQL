@@ -30,6 +30,8 @@ CREATE TABLE `companies` (
   `status` enum('published','unpublished','draft') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'draft',
   `num_street` tinyint unsigned DEFAULT NULL,
   `country` char(4) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`comp`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -79,6 +81,8 @@ CREATE TABLE `pilots` (
   `birth_day` datetime DEFAULT NULL,
   `next_flight` datetime DEFAULT NULL,
   `num_jobs` smallint unsigned DEFAULT '0',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`certificate`),
   UNIQUE KEY `name` (`name`),
   KEY `fk_pilots_company` (`company`),
@@ -107,4 +111,4 @@ CREATE TABLE `txt` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-08-18 14:01:11
+-- Dump completed on 2023-08-18 15:41:00

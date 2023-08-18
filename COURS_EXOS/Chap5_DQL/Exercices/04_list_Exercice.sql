@@ -174,6 +174,9 @@ Récupérez le nom de ces villes.
 
 ALTER TABLE `companies` ADD COLUMN `country` CHAR(4) ;
 
-SELECT `company`, AVG(num_flying) FROM `pilots`
-WHERE `company`  IN ( SELECT `comp` FROM `companies` WHERE `country` = 'fr' )
-GROUP BY `company` ;
+-- il faut regrouper les noms des villes dans la deuxième requête car la première contient uniquement la moyenne des villes en France
+
+( SELECT  AVG(num_flying) FROM `pilots`
+WHERE `company`  IN ( SELECT `comp` FROM `companies` WHERE `country` = 'fr' )  )  UNION (
+SELECT GROUP_CONCAT(city) FROM `companies` WHERE `country` = 'fr' GROUP BY country )
+
